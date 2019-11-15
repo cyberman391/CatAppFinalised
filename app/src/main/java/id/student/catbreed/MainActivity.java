@@ -107,20 +107,20 @@ public class MainActivity extends AppCompatActivity implements HomeFragment.OnHe
                 }
             }
             if (iSequal) {
-                Toast.makeText(this, "Your Cat is Exist !!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Your Cat Exists !!", Toast.LENGTH_SHORT).show();
             } else {
                 mlistArr.add(mdata);
                 mlistArr.size();
                 editor.putString("data_arr", mgson.toJson(mlistArr));
                 editor.commit();
-                Toast.makeText(this, "Success add to favorites..!!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Success added to favorites..!!", Toast.LENGTH_SHORT).show();
             }
         } else {//new array
             List<ModelListBreed> mlist = new ArrayList<>();
             mlist.add(mdata);
             editor.putString("data_arr", mgson.toJson(mlist));
             editor.commit();
-            Toast.makeText(this, "Success add to favorites..!!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Success added to favorites..!!", Toast.LENGTH_SHORT).show();
         }
     }
 }
